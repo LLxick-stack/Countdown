@@ -73,6 +73,186 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="16dp" />
 
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Время события"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:layout_marginBottom="8dp" />
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:timePickerMode="spinner"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вид фона"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/backgroundModeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/gradientMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Градиент"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/transparentMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Прозрачный, только цифры" />
+
+                    <RadioButton
+                        android:id="@+id/dynamicMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Динамический цвет" />
+
+                    <RadioButton
+                        android:id="@+id/imageMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Фото" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/gradientStartInput"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="#365B6D"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_marginEnd="8dp" />
+
+                    <EditText
+                        android:id="@+id/gradientEndInput"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="#C95C54"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/textColorInput"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="#FFFFFF"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_marginEnd="8dp" />
+
+                    <Spinner
+                        android:id="@+id/fontSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/widgetEditor"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@drawable/widget_background"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/timerPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/timerPreviewDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textColor="#FFFFFF"
+                            android:textSize="44sp"
+                            android:textStyle="bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4" />
+
+                        <TextView
+                            android:id="@+id/timerPreviewLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="дней"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="3" />
+
+                        <TextView
+                            android:id="@+id/timerPreviewTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:30"
+                            android:textColor="#FFFFFF"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/eventPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Название события"
+                        android:textColor="#EEEEEE"
+                        android:textSize="16sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:padding="4dp" />
+
+                </FrameLayout>
+
                 <ImageView
                     android:id="@+id/imagePreview"
                     android:layout_width="match_parent"
